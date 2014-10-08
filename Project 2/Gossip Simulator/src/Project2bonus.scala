@@ -238,35 +238,7 @@ object Project2bonus extends App{
 			return square
 		}
 
-		/*def MakeNodes (num_Nodes : Int)
-		{
-						val system = ActorSystem("GossipSystem")
-						var master : ActorRef =  system.actorOf(Props[Master], name = "master") //MasteClass => Master
-						var node : List[ActorRef] = Nil		//ActorList => Node
-
-						var node_loop : Int = 0
-						while (node_loop < num_Nodes){
-							node ::= system.actorOf(Props[Nodes]) // ActorClass => Nodes
-							node_loop += 1;
-						}
-		}*/
-
-		// Match the algorithm and then call master
-		/*if(gossip_after_topology_creation == 1){
-		algorithm match {
-		case "gossip" => println("Gossip")//new Gossip()
-						 master ! "hi"
 		
-		case "pushsum" => println("PushSum")//new PushSum()
-						  master ! "hi"
-		
-		case _ => {
-					println("Sorry that Algorithm is under construction")
-					println("The algorithms you can use are : gossip , pushsum")
-					System.exit(1)
-				  } 
-	}
-}*/
 			master ! GossipMessage(node(0), algorithm, numNodes, failNodes)
 	}
 
@@ -412,81 +384,26 @@ object Project2bonus extends App{
 						node(neighbors(RandomNeighbor)) ! GossipAlgorithm(myID, start_time , failureNodes )
 						self ! GossipAlgorithm(myID, start_time , failureNodes)
 					}
-						/*RandomNeighbor = Random.nextInt(neighbors.length)
-						//println("---------------------------------------------------")
-						//println("Transmitting ----" + RandomNeighbor + "----" + myID)
-						node(neighbors(RandomNeighbor)) ! GossipAlgorithm(myID, start_time)
-						self ! GossipAlgorithm(myID, start_time)
-						if(node_with_rumour.length == 0)
-						{
-							
-							var RandomNeighbor:Int = 0
-							RandomNeighbor = Random.nextInt(neighbors.length)
-							node_with_rumour ::= RandomNeighbor
-							node_with_rumour ::= myID
-							//println(node_with_rumour.length)
-							//println("---------------------------------------------------")
-							//println("Transmitting ----" + RandomNeighbor + "----" + myID)
-							node(neighbors(RandomNeighbor)) ! GossipAlgorithm(myID, start_time )
-							self ! GossipAlgorithm(myID, start_time )
-						}
-						else{
-							var RandomNeighbor:Int = 0
-							RandomNeighbor = Random.nextInt(neighbors.length)
-							if(!(node_with_rumour contains RandomNeighbor))
-							{
-									node_with_rumour ::= RandomNeighbor
-							}
-							var i : Int = 0
-							while(i < node_with_rumour.length){
-								//println("---------------------------------------------------")
-								//println("Transmitting ----" + node_with_rumour(i))
-								node(node_with_rumour(i)) ! GossipAlgorithm(myID, start_time )
-								i += 1
-							}
-							
-						}
-
-				}*/
-
+						
 				case PushsumAlgorithm(new_s_value:Double, new_w_value:Double, start_time:Long , failureNodes : List[Int] ) => {
 					if(!(failureNodes contains myID)){
-					//		println("inside pushsum-->negcount="+Delta_Difference)
-					//var flag : Int = 1
-					//println(myID);
+					
 					Count_Rumour += 1
 					var oldratio:Double = s_value/w_value
-					//		println("oldratio="+oldratio+"s="+s+"w="+w)
+					
 					s_value += new_s_value
 					w_value += new_w_value
 					s_value = s_value/2
 					w_value = w_value/2
 					var newratio:Double = s_value/w_value
-					//		println("newratio="+newratio+"s="+s+"w="+w)
+					
 					if ((Count_Rumour == 1) || (Math.abs((oldratio-newratio)) > math.pow(10, -10))) {
-								//println("Inside If--->")
 								Delta_Difference=0
 								var RandomNeighbor = Random.nextInt(neighbors.length)
 								node(neighbors(RandomNeighbor)) ! PushsumAlgorithm(s_value, w_value, start_time, failureNodes)
-								/*while(flag == 1){
-
-									var RandomNeighbor = Random.nextInt(neighbors.length)
-									println("Random" + RandomNeighbor)
-									
-									if(failureNodes contains RandomNeighbor){
-										println("Failure" + RandomNeighbor)
-										flag = 1
-									}
-									else{
-										flag = 0
-										println("Success" + RandomNeighbor)
-										node(neighbors(RandomNeighbor)) ! PushsumAlgorithm(s_value, w_value, start_time, failureNodes)
-									}
-
-								}*/
 								} 
 								else {
-								//println("Inside Else---->")
+								
 								Delta_Difference += 1
 								if (Delta_Difference > 3) {
 									println("Sum =" + newratio)
@@ -495,56 +412,24 @@ object Project2bonus extends App{
 									} else {
 										var RandomNeighbor = Random.nextInt(neighbors.length)
 										node(neighbors(RandomNeighbor)) ! PushsumAlgorithm(s_value, w_value, start_time, failureNodes)
-										/*while(flag == 1){
-
-										var RandomNeighbor = Random.nextInt(neighbors.length)
-										if(failureNodes contains RandomNeighbor)
-											flag = 1
-										else{
-											flag = 0
-											node(neighbors(RandomNeighbor)) ! PushsumAlgorithm(s_value, w_value, start_time, failureNodes)
-										}
-
-								}*/
 									}
 								}
 					}
 					else{
-						//println("I'm here")
-						//println(myID);
-					//Count_Rumour += 1
 					var oldratio:Double = s_value/w_value
-					//		println("oldratio="+oldratio+"s="+s+"w="+w)
 					s_value += new_s_value
 					w_value += new_w_value
 					s_value = s_value/2
 					w_value = w_value/2
 					var newratio:Double = s_value/w_value
-					//		println("newratio="+newratio+"s="+s+"w="+w)
 					if ((Count_Rumour == 1) || (Math.abs((oldratio-newratio)) > math.pow(10, -10))) {
-								//println("Inside If--->")
+								
 								Delta_Difference=0
 								var RandomNeighbor = Random.nextInt(neighbors.length)
 								node(neighbors(RandomNeighbor)) ! PushsumAlgorithm(s_value, w_value, start_time, failureNodes)
-								/*while(flag == 1){
-
-									var RandomNeighbor = Random.nextInt(neighbors.length)
-									println("Random" + RandomNeighbor)
-									
-									if(failureNodes contains RandomNeighbor){
-										println("Failure" + RandomNeighbor)
-										flag = 1
-									}
-									else{
-										flag = 0
-										println("Success" + RandomNeighbor)
-										node(neighbors(RandomNeighbor)) ! PushsumAlgorithm(s_value, w_value, start_time, failureNodes)
-									}
-
-								}*/
 								} 
 								else {
-								//println("Inside Else---->")
+					
 								Delta_Difference += 1
 								if (Delta_Difference > 3) {
 									println("Sum =" + newratio)
@@ -553,17 +438,6 @@ object Project2bonus extends App{
 									} else {
 										var RandomNeighbor = Random.nextInt(neighbors.length)
 										node(neighbors(RandomNeighbor)) ! PushsumAlgorithm(s_value, w_value, start_time, failureNodes)
-										/*while(flag == 1){
-
-										var RandomNeighbor = Random.nextInt(neighbors.length)
-										if(failureNodes contains RandomNeighbor)
-											flag = 1
-										else{
-											flag = 0
-											node(neighbors(RandomNeighbor)) ! PushsumAlgorithm(s_value, w_value, start_time, failureNodes)
-										}
-
-								}*/
 									}
 								}
 					}
