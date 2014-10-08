@@ -3,8 +3,6 @@ import scala.math._
 import scala.util.Random
 import scala.concurrent.duration._
 //import scala.concurrent.ExecutionContext.Implicits.global
-//import network_package._
-//import node_package._
 //import akka.actor.Actor._
 
 sealed trait Message
