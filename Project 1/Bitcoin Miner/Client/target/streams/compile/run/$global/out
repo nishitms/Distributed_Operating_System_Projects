@@ -1,0 +1,61 @@
+[0m[[0minfo[0m] [0mRunning client.Client 10.136.31.86[0m
+[0m[[0mdebug[0m] [0mStarting sandboxed run...[0m
+[0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
+[0m[[0mdebug[0m] [0m  Classpath:[0m
+[0m[[0mdebug[0m] [0m	/Users/nishitsadhwani/Downloads/Final_Project/Client/target/scala-2.10/classes[0m
+[0m[[0mdebug[0m] [0m	/Users/nishitsadhwani/.sbt/boot/scala-2.10.1/lib/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/nishitsadhwani/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/bundles/akka-actor_2.10-2.1.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/nishitsadhwani/.ivy2/cache/com.typesafe/config/bundles/config-1.0.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/nishitsadhwani/.ivy2/cache/com.typesafe.akka/akka-remote_2.10/bundles/akka-remote_2.10-2.1.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/nishitsadhwani/.ivy2/cache/io.netty/netty/bundles/netty-3.5.8.Final.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/nishitsadhwani/.ivy2/cache/com.google.protobuf/protobuf-java/jars/protobuf-java-2.4.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/nishitsadhwani/.ivy2/cache/org.uncommons.maths/uncommons-maths/jars/uncommons-maths-1.2.2a.jar[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main to exit[0m
+[0m[[0mdebug[0m] [0m	Thread run-main exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread ClientSystem-akka.actor.default-dispatcher-4 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread ClientSystem-akka.actor.default-dispatcher-4 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-7-thread-3 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-7-thread-3 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread ClientSystem-akka.actor.default-dispatcher-2 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread ClientSystem-akka.actor.default-dispatcher-2 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-9-thread-1 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-9-thread-1 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-7-thread-2 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-7-thread-2 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-10-thread-8 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-10-thread-8 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-7-thread-4 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-7-thread-4 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-10-thread-4 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-10-thread-4 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-10-thread-5 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-10-thread-5 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-10-thread-6 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-10-thread-6 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-10-thread-7 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-10-thread-7 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-7-thread-8 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-7-thread-8 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-10-thread-1 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-10-thread-1 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-10-thread-2 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-10-thread-2 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-10-thread-3 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-10-thread-3 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread ClientSystem-akka.actor.default-dispatcher-3 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread ClientSystem-akka.actor.default-dispatcher-3 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-7-thread-7 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-7-thread-7 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread ClientSystem-akka.actor.default-dispatcher-5 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread ClientSystem-akka.actor.default-dispatcher-5 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-7-thread-5 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-7-thread-5 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-7-thread-1 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-7-thread-1 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread ClientSystem-scheduler-1 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread ClientSystem-scheduler-1 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-7-thread-6 to exit[0m
+[0m[[0mdebug[0m] [0m	Thread pool-7-thread-6 exited.[0m
+[0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
+[0m[[0mdebug[0m] [0mSandboxed run complete..[0m
+[0m[[0mdebug[0m] [0mExited with code 0[0m

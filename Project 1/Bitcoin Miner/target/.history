@@ -1,0 +1,4 @@
+compile
+run 5
+run 3
+exit
